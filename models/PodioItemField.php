@@ -49,6 +49,13 @@ if(!class_exists("PodioItemField")){
     }
 
     /**
+     * Default api_friendly_values treated same as PodioTextItemField
+     */
+    public function api_friendly_values() {
+      return $this->values ? $this->values : null;
+    }
+
+    /**
      * @see https://developers.podio.com/doc/items/update-item-field-values-22367
      */
     public static function update($item_id, $field_id, $attributes = array(), $options = array()) {
